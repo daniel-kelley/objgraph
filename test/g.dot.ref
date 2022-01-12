@@ -1,0 +1,5 @@
+digraph g {
+  "a.o" -> "b.o"
+  # b
+
+}
