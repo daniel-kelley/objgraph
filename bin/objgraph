@@ -8,7 +8,7 @@
 #
 
 require 'optparse'
-require_relative '../lib/objgraph'
+require_relative '../lib/objgraph/objgraph'
 
 options = {}
 
