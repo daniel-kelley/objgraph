@@ -23,6 +23,10 @@ class ObjGraph
     puts "digraph g {"
     @edge.each do |edge_name, edge_syndrome|
       puts edge_name
+      edge_syndrome.each do |ref|
+        puts "  # #{ref}"
+      end
+      puts ""
     end
     puts "}"
   end
