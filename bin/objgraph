@@ -24,6 +24,6 @@ OptionParser.new do |opts|
 end.parse!
 
 ogr = ObjGraph.new(options)
-ogr.scan
+ogr.scan(ARGV)
 ogr.report
 
