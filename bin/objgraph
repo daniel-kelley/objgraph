@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+#
+# objgraph
+#
+# Copyright (c) 2022 by Daniel Kelley
+#
+# SPDX-License-Identifier: MIT
+#
+
+require 'optparse'
+require_relative '../lib/objgraph'
+
+options = {}
+
+OptionParser.new do |opts|
+  opts.banner = "Usage: #{File.basename($0)} [options]"
+  opts.on('--verbose', '-v', 'verbose') do |arg|
+    options[:verbose] = 1
+  end
+  opts.on('--help', '-h', 'help') do |arg|
+    puts opts
+    exit 0
+  end
+end.parse!
+
+ogr = ObjGraph.new(options)
+ogr.scan
+ogr.report
+
