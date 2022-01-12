@@ -64,7 +64,7 @@ class ObjGraph
         edge << [e,v2]
       end
     end
-    edge
+    edge.sort
   end
 
   def scan_objs(objs)
