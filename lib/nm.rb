@@ -8,6 +8,8 @@ require 'set'
 
 class NM
 
+  # Path to this obj
+  attr_reader :path
   # Public symbols defined
   attr_reader :defn
   # Public symbols referenced
@@ -17,6 +19,7 @@ class NM
   NM = ENV['NM'] || 'nm'
 
   def initialize(path)
+    @path = path
     @defn = Set.new
     @extern = Set.new
     scan(path)
